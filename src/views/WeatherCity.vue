@@ -1,4 +1,5 @@
 <template>
+<div>
 
   <v-card
     class="mx-auto"
@@ -7,7 +8,7 @@
     <v-card-text>
       <div>Word of the Day</div>
       <p class="text-h4 text--primary">
-        el·ee·mos·y·nar·y
+  
       </p>
       <p>adjective</p>
       <div class="text--primary">
@@ -49,15 +50,28 @@
       </v-card>
     </v-expand-transition>
   </v-card>
+  </div>
 </template>
 
 <script>
 export default {
   data(){
-    city:{}
+    return{
+   city:{}
+    }
+ 
   },
   created(){
-    
+    this.getCity()
+  },
+  methods:{
+    async getCity(){
+      const key = "4af561725919418cf813bd0a77f4b185"
+      const {data} = await this.axios.get(`https://api.openweathermap.org/data/2.5/weather?q=London&appid=${key}`)
+      this.city = data
+      console.log(this.city)
+      console.log(data.main.humidity)
+    }
   }
 }
 </script>
