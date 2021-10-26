@@ -35,7 +35,7 @@ import Favorites from '../components/Favorites.vue'
      
       console.log(this.weather)
       
-      
+    
     }
     }
   }

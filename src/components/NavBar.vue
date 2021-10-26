@@ -29,7 +29,7 @@
           </v-col>
           
            <v-col>
-              <v-btn color="primary" to="/sticker">Sticker</v-btn>
+              <v-btn color="primary" to="/sticker">Favorites</v-btn>
           </v-col>
         </v-container> 
     </v-navigation-drawer>
