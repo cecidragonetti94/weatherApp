@@ -21,5 +21,13 @@ export default {
 </script>
 
 <style>
+.form-search{
+    margin-right: 500px;
+    display: flex;
+    align-items:  center;
+    margin-left: 500px;
+    margin-bottom: 30px;
 
+
+}
 </style>
