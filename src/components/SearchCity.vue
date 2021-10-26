@@ -1,7 +1,7 @@
 .<template>
   <v-form @submit.prevent="handleCity" class="form-search">
       <v-text-field v-model="city" label="Enter City"></v-text-field>
-      <v-btn color="success" type="submit">Search</v-btn>
+      <v-btn color="success" :disabled="isDisabled" type="submit">Search</v-btn>
   </v-form>
 </template>
 
@@ -10,6 +10,12 @@ export default {
     data(){
         return{
             city: '',
+            
+        }
+    },
+    computed:{
+        isDisabled(){
+            return !this.city
         }
     },
     methods:{

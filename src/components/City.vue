@@ -1,4 +1,4 @@
-.<template>
+<template>
   <v-card class="mx-auto" max-width="344">
     <v-card-text>
       <h1 mb-3>{{ data.name }} - {{ data.sys.country }} 
