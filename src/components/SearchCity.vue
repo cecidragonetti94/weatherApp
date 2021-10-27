@@ -1,7 +1,10 @@
-.<template>
+<template>
   <v-form @submit.prevent="handleCity" class="form-search">
-      <v-text-field v-model="city" label="Enter City"></v-text-field>
+      <v-text-field v-model.lazy="city" label="Enter City"></v-text-field>
+      <!-- <small v-if="this.city === ''">Ciudad</small>
+      <small v-else >No se encontro ciudad</small> -->
       <v-btn color="success" :disabled="isDisabled" type="submit">Search</v-btn>
+
   </v-form>
 </template>
 
@@ -10,6 +13,7 @@ export default {
     data(){
         return{
             city: '',
+            
             
         }
     },
@@ -21,6 +25,7 @@ export default {
     methods:{
         handleCity(){
             this.$emit("accion", this.city)
+            
         }
     }
 }
