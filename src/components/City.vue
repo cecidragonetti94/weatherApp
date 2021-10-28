@@ -1,7 +1,7 @@
 <template>
-  <v-card color="secondary" class="mx-auto" max-width="350">
+  <v-card color="secondary" class="mx-auto" max-width="400" min-height="500">
     <v-card-text>
-      <h1 mb-3>
+      <h1 mb-3 class="text-center">
         {{ data.name }} - {{ data.sys.country }}
         <v-icon
           size="60"
@@ -27,38 +27,17 @@
         <v-icon size="60" v-else> fa-wind</v-icon>
       </h1>
       <hr />
-      <div>
-        <h3>Weather: {{ data.weather[0].main }}</h3>
-        <h3>Humidity: {{ data.main.humidity }}%</h3>
-        <h3>Pressure: {{ data.main.pressure }}</h3>
-        <h3>Tempeture: {{ tempeture() }}°</h3>
-        <h4>Max tempeture: {{tempMax()}}°</h4>
-        <h4>Min tempeture: {{ tempMin()}}° </h4>
+      <div class="datos">
+      
+        <h2><span>Weather:</span>  {{ data.weather[0].main }}</h2>
+        <h2><span>Humidity:</span>  {{ data.main.humidity }}%</h2>
+        <h2><span>Pressure:</span>  {{ data.main.pressure }}</h2>
+        <h2><span>Tempeture:</span>  {{ tempeture() }}°</h2>
+        <h3><span>Max tempeture:</span>  {{ tempMax() }}°</h3>
+        <h3><span>Min tempeture:</span>  {{ tempMin() }}°</h3>
       </div>
     </v-card-text>
-    <v-card-actions>
-      <v-btn text color="teal accent-4"> Learn More </v-btn>
-    </v-card-actions>
-
-    <v-expand-transition>
-      <v-card
-        v-if="reveal"
-        class="transition-fast-in-fast-out v-card--reveal"
-        style="height: 100%"
-      >
-        <v-card-text class="pb-0">
-          <p class="text-h4 text--primary">Origin</p>
-          <p>
-            late 16th century (as a noun denoting a place where alms were
-            distributed): from medieval Latin eleemosynarius, from late Latin
-            eleemosyna ‘alms’, from Greek eleēmosunē ‘compassion’
-          </p>
-        </v-card-text>
-        <v-card-actions class="pt-0">
-          <v-btn text color="teal accent-4"> Close </v-btn>
-        </v-card-actions>
-      </v-card>
-    </v-expand-transition>
+   
   </v-card>
 </template>
 
@@ -90,4 +69,20 @@ export default {
 </script>
 
 <style>
+span {
+  color: #40cbbe;
+}
+h2,h3{
+  font-size: 30px;
+}
+h1{
+  font-size: 40px;
+}
+.datos{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  min-height: 500px;
+  align-items: center;
+}
 </style>

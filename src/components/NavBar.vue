@@ -19,7 +19,7 @@
             </v-avatar>
           </v-col>
           <v-col>
-            <p class="white--text nt-3 headline">Weather</p>
+            <p class="accent--text nt-3 headline">Weather</p>
           </v-col>
           <v-col>
               <v-btn color="primary" to="/">Home</v-btn>
@@ -29,7 +29,7 @@
           </v-col>
           
            <v-col>
-              <v-btn color="primary" to="/sticker">Favorites</v-btn>
+              <v-btn color="primary" to="/favorites">Favorites</v-btn>
           </v-col>
         </v-container> 
     </v-navigation-drawer>
@@ -46,6 +46,8 @@ export default {
 }
 </script>
 
-<style>
-
+<style scoped>
+p{
+  color:#40cbbe;
+}
 </style>

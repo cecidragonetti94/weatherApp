@@ -15,7 +15,14 @@ const routes = [
     name: 'WeatherCity',
   
     component: () => import(/* webpackChunkName: "about" */ '../views/WeatherCity.vue')
-  }
+  },
+  {
+    path: '/favorites',
+    name: 'Favorites',
+  
+    component: () => import(/* webpackChunkName: "about" */ '../views/Favorites.vue')
+  },
+  
 ]
 
 const router = new VueRouter({

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <!-- <div>
     <h1> {{this.weather.name}}</h1>
      <h1> {{this.weather.sys.country}}</h1>
   <v-row>
@@ -9,6 +9,19 @@
      
     </v-col>
   </v-row>
+</div> -->
+<div class="text-center">
+  <h1 >THE WEATHER APP</h1>
+  <br>
+  <p>
+    Para poder buscar el estado del tiempo en una ciudad, por favor dirijase a nuestro menú
+    y seleccione <strong>city</strong> .  Una vez que estes dentro de "city" podras buscar la ciudad que quieras.
+  </p>
+<br>
+<br>
+<div>
+  <img src="https://lavoz.blob.core.windows.net.optimalcdn.com/images/2021/04/16/ventusky-thumb-770x480.jpg" alt="">
+</div>
 </div>
 </template>
 
@@ -43,3 +56,16 @@ import Favorites from '../components/Favorites.vue'
     }
   }
 </script>
+<style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+h1{
+  color:#40cbbe;
+  font-size:50px;
+  font-family: 'Russo One', sans-serif;
+}
+p{
+  font-size:15px;
+  font-family: 'Russo One', sans-serif;
+  
+}
+</style>
