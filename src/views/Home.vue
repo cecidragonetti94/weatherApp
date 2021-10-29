@@ -14,7 +14,7 @@
   <h1 >THE WEATHER APP</h1>
   <br>
   <p>
-    Para poder buscar el estado del tiempo en una ciudad, por favor dirijase a nuestro menú
+    Para poder buscar el estado del tiempo en una ciudad, por favor diríjase a nuestro menú
     y seleccione <strong>city</strong> .  Una vez que estes dentro de "city" podras buscar la ciudad que quieras.
   </p>
 <br>

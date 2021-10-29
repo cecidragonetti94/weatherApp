@@ -1,6 +1,7 @@
 <template>
   <v-card color="secondary" class="mx-auto" max-width="400" min-height="500">
     <v-card-text>
+      
       <h1 mb-3 class="text-center">
         {{ data.name }} - {{ data.sys.country }}
         <v-icon
@@ -35,6 +36,7 @@
         <h2><span>Tempeture:</span>  {{ tempeture() }}°</h2>
         <h3><span>Max tempeture:</span>  {{ tempMax() }}°</h3>
         <h3><span>Min tempeture:</span>  {{ tempMin() }}°</h3>
+       
       </div>
     </v-card-text>
    
@@ -49,6 +51,7 @@ export default {
   data() {
     return {
       kelvin: 273.15,
+      
     };
   },
   methods: {
@@ -64,6 +67,7 @@ export default {
       const tempMin = this.data.main.temp_min - this.kelvin;
       return Math.round(tempMin);
     },
+    
   },
 };
 </script>

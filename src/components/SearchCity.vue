@@ -1,6 +1,7 @@
 <template>
   <v-form @submit.prevent="handleCity" class="form-search">
-      <v-text-field v-model.lazy="city" label="Enter City"></v-text-field>
+      <v-text-field v-model.trim="city" label="Enter City"> </v-text-field>
+       
       <v-btn color="success" :disabled="isDisabled" type="submit">Search</v-btn>
 
   </v-form>
@@ -24,7 +25,8 @@ export default {
         handleCity(){
             this.$emit("accion", this.city)
             
-        }
+        },
+        
     }
 }
 </script>
