@@ -1,16 +1,18 @@
 <template>
 <v-container>
-    <p>Ingrese codigo postal</p>
-    <search-city @accion="zipCoder"/>
-    <city-zip-code/>
+   
+    <city-zip-code :code="e3"/>
 </v-container>  
 </template>
 
 <script>
 import CityZipCode from '../components/CityZipCode.vue'
-import SearchCity from '../components/SearchCity.vue'
+
 export default {
-  components: { SearchCity, CityZipCode },
+  components: {  CityZipCode },
+  props:{
+      e3: Array
+  },
  data(){
      return{
          coder: {}
@@ -20,13 +22,13 @@ export default {
       this.zipCoder()
  },
  methods:{
-     async zipCoder(city){
+     async zipCoder(e3){
          const key = "4af561725919418cf813bd0a77f4b185"
          const pais = "us"
-         const {data} = await this.axios.get(`https://api.openweathermap.org/data/2.5/weather?zip=${city},${pais}&appid=${key}`)
-         this.code = data
-         console.log("data",this.code)
-         console.log("city", city)
+         const {data} = await this.axios.get(`https://api.openweathermap.org/data/2.5/weather?zip=${e3},${pais}&appid=${key}`)
+         this.coder = data
+         console.log("data",this.coder)
+         console.log("city", e3)
      }
  }
 }
