@@ -31,6 +31,9 @@
            <v-col>
               <v-btn color="primary" to="/argentina">Argentina</v-btn>
           </v-col>
+          <v-col>
+              <v-btn color="primary" to="/zipCode">Zip Code</v-btn>
+          </v-col>
         </v-container> 
     </v-navigation-drawer>
   </v-card>

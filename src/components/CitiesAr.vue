@@ -83,7 +83,7 @@ span {
 h1{
   color: #40cbbe;
   font-family:'Russo One', sans-serif;
-  font-size: 80px;
+  font-size: 70px;
 }
 
 </style>

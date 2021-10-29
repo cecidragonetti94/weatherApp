@@ -1,6 +1,9 @@
 <template>
 
-<div class="text-center">
+<div class="text-center" col="12"
+        md="12"
+        xs="2"
+        lg="8">
   <h1 >THE WEATHER APP</h1>
   <br>
   <p>

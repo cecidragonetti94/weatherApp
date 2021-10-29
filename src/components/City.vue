@@ -32,7 +32,7 @@
       </h1>
       <hr />
       <div class="datos">
-      
+     
         <h2><span>Weather:</span>  {{ data.weather[0].main }}</h2>
         <h2><span>Humidity:</span>  {{ data.main.humidity }}%</h2>
         <h2><span>Pressure:</span>  {{ data.main.pressure }}</h2>

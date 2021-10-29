@@ -22,6 +22,12 @@ const routes = [
   
     component: () => import(/* webpackChunkName: "about" */ '../views/Argentina.vue')
   },
+  {
+    path: '/zipCode',
+    name: 'ZipCode',
+  
+    component: () => import(/* webpackChunkName: "about" */ '../views/ZipCode.vue')
+  },
   
 ]
 
