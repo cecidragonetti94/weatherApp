@@ -25,11 +25,11 @@
               <v-btn color="primary" to="/">Home</v-btn>
           </v-col>
           <v-col>
-              <v-btn color="primary" to="/weatherCity">City</v-btn>
+              <v-btn color="primary" to="/weatherCity">Search</v-btn>
           </v-col>
           
            <v-col>
-              <v-btn color="primary" to="/favorites">Favorites</v-btn>
+              <v-btn color="primary" to="/argentina">Argentina</v-btn>
           </v-col>
         </v-container> 
     </v-navigation-drawer>

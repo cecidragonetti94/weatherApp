@@ -16,7 +16,7 @@ export default new Vuetify({
         error: '#FF5252',
         info: '#AAB7B8',// gris
         success: '#5D6D7E',//azulgris
-        warning: '#FFC107'
+        warning: '#FFF11B'
       },
     },
   },

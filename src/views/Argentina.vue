@@ -1,11 +1,11 @@
 .<template>
-  <favorites :data="bbox"/>
+  <CitiesAr :data="bbox"/>
 </template>
 
 <script>
-import Favorites from '../components/Favorites.vue'
+import CitiesAr from '../components/CitiesAr.vue'
 export default {
-  components: { Favorites },
+  components: { CitiesAr },
   data(){
     return{
       bbox:[]
@@ -19,7 +19,7 @@ export default {
      const key = "4af561725919418cf813bd0a77f4b185"
      const lat = -38.416097
      const lon = -63.616672
-     const cant = 10
+     const cant = 9
      const {data} = await this.axios.get(`https://api.openweathermap.org/data/2.5/find?lat=${lat}&lon=${lon}&cnt=${cant}&appid=${key}`)
     this.bbox = data
     console.log("la data", this.bbox)

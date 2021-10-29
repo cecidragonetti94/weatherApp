@@ -1,15 +1,5 @@
 <template>
-  <!-- <div>
-    <h1> {{this.weather.name}}</h1>
-     <h1> {{this.weather.sys.country}}</h1>
-  <v-row>
-   <v-col col=12 v-for="item in weather" :key="item.id">
-      <h1>{{item.name}} </h1>
-       <Favorites class="m-3 w-100" :data="item"/>
-     
-    </v-col>
-  </v-row>
-</div> -->
+
 <div class="text-center">
   <h1 >THE WEATHER APP</h1>
   <br>
@@ -27,7 +17,7 @@
 
 <script>
 
-import Favorites from '../components/Favorites.vue'
+import Favorites from '../components/CitiesAr.vue'
 
 
   export default {

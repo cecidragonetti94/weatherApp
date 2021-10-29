@@ -1,5 +1,8 @@
 <template>
-  <v-card color="secondary" class="mx-auto" max-width="400" min-height="500">
+  <v-card color="secondary" class="mx-auto" max-width="400" min-height="500"  col="12"
+        md="4"
+        xs="2"
+        lg="4">
     <v-card-text>
       
       <h1 mb-3 class="text-center">
@@ -65,7 +68,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 span {
   color: #40cbbe;
 }
