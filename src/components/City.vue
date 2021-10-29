@@ -33,9 +33,9 @@
         <h2><span>Weather:</span>  {{ data.weather[0].main }}</h2>
         <h2><span>Humidity:</span>  {{ data.main.humidity }}%</h2>
         <h2><span>Pressure:</span>  {{ data.main.pressure }}</h2>
-        <h2><span>Tempeture:</span>  {{ tempeture() }}°</h2>
-        <h3><span>Max tempeture:</span>  {{ tempMax() }}°</h3>
-        <h3><span>Min tempeture:</span>  {{ tempMin() }}°</h3>
+        <h2><span>Tempeture:</span>  {{ tempeture(data.main.temp) }}°</h2>
+        <h3><span>Max tempeture:</span>  {{ tempeture(data.main.temp_max) }}°</h3>
+        <h3><span>Min tempeture:</span>  {{ tempeture(data.main.temp_min) }}°</h3>
        
       </div>
     </v-card-text>
@@ -55,18 +55,11 @@ export default {
     };
   },
   methods: {
-    tempeture() {
-      const temp = this.data.main.temp - this.kelvin;
+    tempeture(tempe) {
+      const temp = tempe - this.kelvin;
       return Math.round(temp);
     },
-    tempMax() {
-      const tempMax = this.data.main.temp_max - this.kelvin;
-      return Math.round(tempMax);
-    },
-    tempMin() {
-      const tempMin = this.data.main.temp_min - this.kelvin;
-      return Math.round(tempMin);
-    },
+    
     
   },
 };
