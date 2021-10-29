@@ -1,7 +1,7 @@
 <template>
 <v-container>
    
-    <city-zip-code :code="e3"/>
+    <city-zip-code @estado="handleCode"/>
 </v-container>  
 </template>
 
@@ -10,9 +10,7 @@ import CityZipCode from '../components/CityZipCode.vue'
 
 export default {
   components: {  CityZipCode },
-  props:{
-      e3: Array
-  },
+ 
  data(){
      return{
          coder: {}

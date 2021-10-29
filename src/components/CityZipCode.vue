@@ -10,7 +10,7 @@
       <v-col cols="6">
         <v-select
           v-model="e1"
-          :items="e3"
+          @estado="handleCode"
           menu-props="auto"
           label="Select"
           hide-details
@@ -51,10 +51,11 @@ export default {
         ],
       }
     },
-//    methods: {
-//     handleCode() {
-//       this.$emit("accion", this.states);
-//     },
+    methods: {
+     handleCode() {
+       this.$emit("estado", this.e3);
+     },
+}
 }
 </script>
 
