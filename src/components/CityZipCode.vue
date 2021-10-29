@@ -1,5 +1,6 @@
 
   <template>
+  
   <v-container fluid>
     <v-row align="center">
       <v-col cols="6">
@@ -10,7 +11,7 @@
       <v-col cols="6">
         <v-select
           v-model="e1"
-          @estado="handleCode"
+          :items="states"
           menu-props="auto"
           label="Select"
           hide-details
@@ -26,7 +27,9 @@
 
 <script>
 export default {
-
+props:{
+    text: String
+},
     data () {
       return {
         e1: 'Florida',
@@ -51,11 +54,11 @@ export default {
         ],
       }
     },
-    methods: {
-     handleCode() {
-       this.$emit("estado", this.e3);
-     },
-}
+     methods: {
+      handleCode() {
+        this.$emit("items", this.states);
+      },
+ }
 }
 </script>
 

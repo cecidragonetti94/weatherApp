@@ -1,7 +1,7 @@
 <template>
 <v-container>
    
-    <city-zip-code @estado="handleCode"/>
+    <city-zip-code @items="states" />
 </v-container>  
 </template>
 
@@ -10,7 +10,9 @@ import CityZipCode from '../components/CityZipCode.vue'
 
 export default {
   components: {  CityZipCode },
- 
+  props:{
+      e3: Array
+  },
  data(){
      return{
          coder: {}
@@ -20,13 +22,13 @@ export default {
       this.zipCoder()
  },
  methods:{
-     async zipCoder(e3){
+     async zipCoder(states){
          const key = "4af561725919418cf813bd0a77f4b185"
          const pais = "us"
-         const {data} = await this.axios.get(`https://api.openweathermap.org/data/2.5/weather?zip=${e3},${pais}&appid=${key}`)
-         this.coder = data
-         console.log("data",this.coder)
-         console.log("city", e3)
+         const {data} = await this.axios.get(`https://api.openweathermap.org/data/2.5/weather?zip=${states},${pais}&appid=${key}`)
+         this.code = data
+         console.log("data",this.code)
+        
      }
  }
 }
