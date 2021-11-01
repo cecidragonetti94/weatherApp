@@ -1,6 +1,5 @@
 <template>
   <v-container fluid>
-   <p>hola {{states}}</p>
     <v-row align="center">
       <v-col cols="6">
         <v-subheader>
@@ -11,14 +10,18 @@
       <v-col cols="6">
          
         <v-select
-         v-for="items in states" :key="items.id"
+          
           v-model="select"
           label="Estado"
-          :items= "items.name"
+         :items="states"
+          item-text="name"
+          item-value="cp"
           persistent-hint
           return-object
           single-line
-        ></v-select>
+          menu-props="auto"
+        >
+      </v-select>
       </v-col>
     </v-row>
   </v-container>
