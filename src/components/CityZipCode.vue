@@ -1,25 +1,25 @@
-
-  <template>
-  
+<template>
   <v-container fluid>
+   <p>hola {{states}}</p>
     <v-row align="center">
       <v-col cols="6">
         <v-subheader>
-          zip coder
+ CP
         </v-subheader>
       </v-col>
+
       <v-col cols="6">
+         
         <v-select
-          v-model="e1"
-          :items="states"
-          menu-props="auto"
-          label="Select"
-          hide-details
-          prepend-icon="mdi-map"
+         v-for="items in states" :key="items.id"
+          v-model="select"
+          label="Estado"
+          :items= "items.name"
+          persistent-hint
+          return-object
           single-line
         ></v-select>
       </v-col>
-     
     </v-row>
   </v-container>
 </template>
@@ -27,41 +27,40 @@
 
 <script>
 export default {
-props:{
-    text: String
-},
-    data () {
-      return {
-        e1: 'Florida',
-        e2: 'Texas',
-        e3: ['94040'],
-        e4: null,
-        states: [
-          'Alabama', 'Alaska', 'American Samoa', 'Arizona',
-          'Arkansas', 'California', 'Colorado', 'Connecticut',
-          'Delaware', 'District of Columbia', 'Federated States of Micronesia',
-          'Florida', 'Georgia', 'Guam', 'Hawaii', 'Idaho',
-          'Illinois', 'Indiana', 'Iowa', 'Kansas', 'Kentucky',
-          'Louisiana', 'Maine', 'Marshall Islands', 'Maryland',
-          'Massachusetts', 'Michigan', 'Minnesota', 'Mississippi',
-          'Missouri', 'Montana', 'Nebraska', 'Nevada',
-          'New Hampshire', 'New Jersey', 'New Mexico', 'New York',
-          'North Carolina', 'North Dakota', 'Northern Mariana Islands', 'Ohio',
-          'Oklahoma', 'Oregon', 'Palau', 'Pennsylvania', 'Puerto Rico',
-          'Rhode Island', 'South Carolina', 'South Dakota', 'Tennessee',
-          'Texas', 'Utah', 'Vermont', 'Virgin Island', 'Virginia',
-          'Washington', 'West Virginia', 'Wisconsin', 'Wyoming',
-        ],
+  // props: {
+  //   text: String,
+  // },
+  data() {
+    return {
+      states: {},
+      //  select: { state: 'Florida', abbr: 'FL' },
+      //  items: [
+      //    { state: 'Florida', abbr: 'FL' },
+      //   { state: 'Georgia', abbr: 'GA' },
+      //  { state: 'Nebraska', abbr: 'NE' },
+      //   { state: 'California', abbr: 'CA' },
+      //    { state: 'New York', abbr: 'NY' },
+      //  ],
+       select: null,
+    };
+  },
+  created() {
+    this.setStates();
+  },
+
+  methods: {
+    async setStates() {
+      try {
+        const {data} = await this.axios.get("cp.json");
+        this.states = data
+        console.log("estados", states);
+      } catch (error) {
+        console.log(error);
       }
     },
-     methods: {
-      handleCode() {
-        this.$emit("items", this.states);
-      },
- }
-}
+  },
+};
 </script>
 
 <style>
-
 </style>

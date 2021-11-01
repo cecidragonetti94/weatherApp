@@ -1,4 +1,5 @@
 .<template>
+
   <CitiesAr :data="bbox"/>
 </template>
 
