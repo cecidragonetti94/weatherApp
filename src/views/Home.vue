@@ -6,10 +6,13 @@
         lg="8">
   <h1 >THE WEATHER APP</h1>
   <br>
-  <p>
-    Para poder buscar el estado del tiempo en una ciudad, por favor diríjase a nuestro menú
-    y seleccione <strong>city</strong> .  Una vez que estes dentro de "city" podras buscar la ciudad que quieras.
-  </p>
+  <p> En esta web podras buscar:</p>
+  <ul class="text-center">
+  
+    <li> Nombre de la ciudad que quieras ver su estado del tiempo en <strong>"search".</strong></li>
+    <li> Ciudades argentinas de diferentes lugares del pais para comparar su estado del tiempo en <strong>"Argentina".</strong></li>
+    <li> Podes seleccionar un estado de EE.UU con su codigo postal para poder ver el estado del tiempo en esa ciudad en <strong>"Zip Code".</strong> </li>
+  </ul>
 <br>
 <br>
 <div>

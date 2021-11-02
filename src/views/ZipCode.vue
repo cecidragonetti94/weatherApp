@@ -1,16 +1,16 @@
 <template>
   <v-container>
     <city-zip-code @change="zipCoder" />
-    <CardState :data="coder"/>
+    <City :data="coder"/>
   </v-container>
 </template>
 
 <script>
 import CityZipCode from "../components/CityZipCode.vue";
-import CardState from "../components/CardState.vue"
+import City from "../components/City.vue"
 
 export default {
-  components: { CityZipCode, CardState },
+  components: { CityZipCode, City },
   props: {
     select: String,
   },

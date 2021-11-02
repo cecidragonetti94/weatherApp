@@ -59,5 +59,13 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+p{
+  font-family:'Russo One', sans-serif;
+}
+small{
+  font-family:'Russo One', sans-serif;
+  
+}
 </style>
