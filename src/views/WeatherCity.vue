@@ -1,15 +1,15 @@
 <template>
 <div>
   <SearchCity @accion="getCity"/>
-  <City :data="city"/>
+  <CardCity :data="city"/>
   </div>
 </template>
 
 <script>
-import City from '../components/City.vue'
+import CardCity from '../components/CardCity.vue'
 import SearchCity from '../components/SearchCity.vue'
 export default {
-  components: { City, SearchCity },
+  components: { CardCity, SearchCity },
   data(){
     return{
    city:{}
