@@ -1,8 +1,9 @@
 <template>
   <v-container fluid class="text-center">
-    <p>Seleccione un estado para ver su estado climático.</p>
+    <p>Seleccione un estado para ver su pronóstico climático.</p>
     <small>La api solo permite la llamada a estados de USA</small>
-    <v-row align="center" class="d-inline">
+    <br>
+    <v-row class="d-inline">
     
       <v-col cols="6">
         <v-select
@@ -44,14 +45,16 @@ export default {
       try {
         const { data } = await this.axios.get("cp.json");
         this.states = data;
-        console.log("estados", this.states);
+        // console.log("estados", this.states);
       } catch (error) {
         console.log(error);
       }
     },
     changeState(valor) {
       this.select = valor.cp;
+      this.$emit("change", this.select);
     },
+    
   },
 };
 </script>

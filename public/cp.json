@@ -3,52 +3,52 @@
           {
             "id": 1,
             "name": "Alabama",
-            "cp": 35762
+            "cp": 35801
           },
           {
             "id": 2,
             "name": "Alaska",
-            "cp": 56667
+            "cp": 99501
           },
           {
             "id": 3,
             "name": "Arizona",
-            "cp": 85123
+            "cp": 85001
           },
           {
             "id": 4,
             "name": "Arkansas",
-            "cp": 71630
+            "cp": 72201
           },
           {
             "id": 5,
             "name": "California",
-            "cp": 93504
+            "cp": 90001
           },
           {
             "id": 6,
             "name": "Colorado",
-            "cp": 81019
+            "cp": 80201
           },
           {
             "id": 7,
             "name": "Connecticut",
-            "cp": 6071
+            "cp": 6101
           },
           {
             "id": 8,
             "name": "Florida",
-            "cp": 34997
+            "cp": 33124
           },
           {
             "id": 9,
             "name": "Georgia",
-            "cp": 39901
+            "cp": 30301
           },
           {
             "id": 10,
             "name": "Hawaii",
-            "cp": 96898
+            "cp": 96801
           },
           {
             "id": 11,
@@ -58,12 +58,12 @@
           {
             "id": 12,
             "name": "Illinois",
-            "cp": 62999
+            "cp": 60601
           },
           {
             "id": 13,
             "name": "Indiana",
-            "cp": 47997
+            "cp": 46201
           },
           {
             "id": 14,
@@ -73,17 +73,17 @@
           {
             "id": 15,
             "name": "Kansas",
-            "cp": 67954
+            "cp": 67201
           },
           {
             "id": 16,
             "name": "Kentucky",
-            "cp": 42788
+            "cp": 41701
           },
           {
             "id": 17,
             "name": "Louisiana",
-            "cp": 71497
+            "cp": 70112
           },
           {
             "id": 18,
@@ -93,17 +93,17 @@
           {
             "id": 19,
             "name": "Maryland",
-            "cp": 21930
+            "cp": 21201
           },
           {
             "id": 20,
             "name": "Massachusetts",
-            "cp": 5544
+            "cp": "02101"
           },
           {
             "id": 21,
             "name": "Michigan",
-            "cp": 49971
+            "cp": 49036
           },
           {
             "id": 22,
@@ -153,7 +153,7 @@
           {
             "id": 31,
             "name": "New York",
-            "cp": 14925
+            "cp": 10001
           },
           {
             "id": 32,
@@ -168,7 +168,7 @@
           {
             "id": 34,
             "name": "Ohio",
-            "cp": 45999
+            "cp": 44101
           },
           {
             "id": 35,
@@ -178,7 +178,7 @@
           {
             "id": 36,
             "name": "Oregon",
-            "cp": 97920
+            "cp": 97201
           },
           {
             "id": 37,
@@ -193,7 +193,7 @@
           {
             "id": 39,
             "name": "South Carolina",
-            "cp": 29945
+            "cp": 29020
           },
           {
             "id": 40,
@@ -203,12 +203,12 @@
           {
             "id": 41,
             "name": "Tennessee",
-            "cp": 38589
+            "cp": 37201
           },
           {
             "id": 42,
             "name": "Texas",
-            "cp": 88595
+            "cp": 78701
           },
           {
             "id": 43,
