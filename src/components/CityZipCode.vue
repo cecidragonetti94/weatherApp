@@ -1,27 +1,26 @@
 <template>
-  <v-container fluid>
-    <v-row align="center">
+  <v-container fluid class="text-center">
+    <p>Seleccione un estado para ver su estado climático.</p>
+    <small>La api solo permite la llamada a estados de USA</small>
+    <v-row align="center" class="d-inline">
+    
       <v-col cols="6">
-        <v-subheader>
- CP
-        </v-subheader>
-      </v-col>
-
-      <v-col cols="6">
-         
         <v-select
-          
           v-model="select"
           label="Estado"
-         :items="states"
+          :items="states"
           item-text="name"
           item-value="cp"
           persistent-hint
           return-object
           single-line
           menu-props="auto"
+          @change="(valor) => changeState(valor)"
         >
-      </v-select>
+        </v-select>
+      </v-col>
+      <v-col cols="12" sm="3" md="3">
+        <v-text-field v-model="select" label="Código Postal"></v-text-field>
       </v-col>
     </v-row>
   </v-container>
@@ -30,21 +29,10 @@
 
 <script>
 export default {
-  // props: {
-  //   text: String,
-  // },
   data() {
     return {
-      states: {},
-      //  select: { state: 'Florida', abbr: 'FL' },
-      //  items: [
-      //    { state: 'Florida', abbr: 'FL' },
-      //   { state: 'Georgia', abbr: 'GA' },
-      //  { state: 'Nebraska', abbr: 'NE' },
-      //   { state: 'California', abbr: 'CA' },
-      //    { state: 'New York', abbr: 'NY' },
-      //  ],
-       select: null,
+      states: [],
+      select: "",
     };
   },
   created() {
@@ -54,12 +42,15 @@ export default {
   methods: {
     async setStates() {
       try {
-        const {data} = await this.axios.get("cp.json");
-        this.states = data
-        console.log("estados", states);
+        const { data } = await this.axios.get("cp.json");
+        this.states = data;
+        console.log("estados", this.states);
       } catch (error) {
         console.log(error);
       }
+    },
+    changeState(valor) {
+      this.select = valor.cp;
     },
   },
 };
