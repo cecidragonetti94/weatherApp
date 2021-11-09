@@ -11,13 +11,14 @@
         v-for="item in this.data.list"
         :key="item.id"
       >
-        <v-card class="mx-auto" color="secondary" max-width=500 >
-          <v-card-title>
+        <v-card class="mx-auto"  color="secondary" max-width=500 >
+          <v-card-title >
             {{ item.name }} - {{ item.sys.country }}
             <v-icon
               size="60"
               color="info"
               v-if="item.weather[0].main === 'Clouds'"
+              class="ml-5"
             >
               fa-cloud</v-icon
             >
@@ -25,6 +26,7 @@
               size="60"
               color="info"
               v-else-if="item.weather[0].main === 'Rain'"
+              class="ml-5"
             >
               fa-cloud-rain</v-icon
             >
@@ -32,10 +34,11 @@
               size="60"
               color="warning"
               v-else-if="item.weather[0].main === 'Clear'"
+              class="ml-5"
             >
               fa-sun</v-icon
             >
-            <v-icon size="60" v-else> fa-wind</v-icon>
+            <v-icon class="ml-5" size="60" v-else> fa-wind</v-icon>
           </v-card-title>
 
           <div>
